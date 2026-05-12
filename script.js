@@ -76,6 +76,3 @@ changeGridButton.addEventListener('click', () => {
 generateRows(gridCount);
 generateCells(gridCount);
 addCellEventListener();
-
-//need to know how many times an event has fires on a given element
-//adjust opacity based on that number
