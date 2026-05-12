@@ -52,9 +52,9 @@ function addCellEventListener() {
 
     cells.forEach(cell => {
         let timesFired = .1;
+
         cell.addEventListener('mouseover', (e) => {
             cell.style.backgroundColor = getRandomRGB(timesFired);
-            // cell.style.opacity = timesFired;
             timesFired += .1;
         })
     })
@@ -63,7 +63,7 @@ function addCellEventListener() {
 changeGridButton.addEventListener('click', () => {
     gridCount = parseInt(prompt('How many rows and columns would you like?', 16));
     
-    if (gridCount !== NaN && gridCount < 100) {
+    if (gridCount !== NaN && gridCount < 101) {
         eraseRowsAndCells();
         generateRows(gridCount);
         generateCells(gridCount);
