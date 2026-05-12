@@ -40,12 +40,22 @@ function generateCells(gridCount) {
     })
 }
 
+function getRandomRGB (timesFired) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgba(${r}, ${g}, ${b}, ${timesFired})`
+}
+
 function addCellEventListener() {
     const cells = document.querySelectorAll('.cell')
 
     cells.forEach(cell => {
+        let timesFired = .1;
         cell.addEventListener('mouseover', (e) => {
-            cell.style.backgroundColor = 'blue';
+            cell.style.backgroundColor = getRandomRGB(timesFired);
+            // cell.style.opacity = timesFired;
+            timesFired += .1;
         })
     })
 }
@@ -66,3 +76,6 @@ changeGridButton.addEventListener('click', () => {
 generateRows(gridCount);
 generateCells(gridCount);
 addCellEventListener();
+
+//need to know how many times an event has fires on a given element
+//adjust opacity based on that number
