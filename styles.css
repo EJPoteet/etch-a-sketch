@@ -1,8 +1,16 @@
+#container {
+    height: 960px;
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+}
+
 .rowDiv {
     display: flex;
+    flex: 1 1 0;
 }
 
 .cell {
-    padding: 12px;
-    border: solid black 2px
+    border: solid black 2px;
+    flex: 1 1 0;
 }
