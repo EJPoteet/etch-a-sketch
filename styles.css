@@ -1,0 +1,8 @@
+.rowDiv {
+    display: flex;
+}
+
+.cell {
+    padding: 12px;
+    border: solid black 2px
+}
